@@ -16,6 +16,9 @@ body {
 .header h1{
     font-size: 40px;
 }
+.row1{
+    padding-left: 20px;
+}
 </style>
 </head>
 <body>
@@ -28,13 +31,14 @@ body {
             A website and machine learning application created by Andrew van der Kleut
         </p>
     </div>
-    <div class = "row">
+    <div class = "row1">
         <h2>
             Image
         </h2>
-        <button type="button">
-            Upload
-        </button>
+        <form action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+            <input type="submit">
+          </form>
         <p2>
             Upload an image of a cell from a blood smear.
         </p2>
