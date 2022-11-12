@@ -17,7 +17,19 @@ body {
     font-size: 40px;
 }
 .row1{
-    padding-left: 20px;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+.row1 h1{
+    font-size: 40px;
+}
+.row2{
+    padding-top: 10px;
+    padding-left: 25px;
+}
+.resultsRow{
+    padding-top: 25px;
+    padding-left: 30px;
 }
 </style>
 </head>
@@ -31,17 +43,29 @@ body {
             A website and machine learning application created by Andrew van der Kleut
         </p>
     </div>
-    <div class = "row1">
-        <h2>
-            Image
-        </h2>
-        <form action="/action_page.php">
-            <input type="file" id="myFile" name="filename">
-            <input type="submit">
-          </form>
-        <p2>
-            Upload an image of a cell from a blood smear.
-        </p2>
+    <div class = row1>
+        <h1>
+            Purpose:
+        </h1>
+        <p>
+            The purpose of this site is to allow people to upload cell images from a blood smear. The image should contain
+            one cell other than erythrocytes in question for analysis. 
+        </p>
+    </div>
+    <div class = "row2">
+        <h1>
+            Image for review
+        </h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+            <input type="file" name="fileToUpload" id="fileToUpload">
+            <input type="submit" value="Upload Image" name="submit">
+        </form>
+    </div>
+    <div class="resultRow">
+        <h1>
+            Results:
+        </h1>
     </div>
 
 </body>
