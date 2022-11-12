@@ -1,0 +1,40 @@
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif
+  }
+  .header {
+      padding: 10px;
+      text-align: center;
+      color: black;
+  }
+  .header h1{
+      font-size: 40px;
+  }
+  .row1{
+      padding-top: 10px;
+      padding-left: 25px;
+  }
+  .row1 h1{
+      font-size: 30px;
+  }
+  .row2{
+      padding-top: 10px;
+      padding-left: 25px;
+  }
+  .row2 h1{
+      font-size: 30px;
+  }
+  .resultRow{
+      padding-top: 25px;
+      padding-left: 30px;
+  }
+  #displayImg{
+      width: 100%;
+      justify-content: center;
+      padding: 5px;
+      margin: 15px;
+  }
+  img{
+      margin: 5px;
+      width: 363px;
+      height: 360px;
+  }

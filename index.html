@@ -4,43 +4,12 @@
 <title>Page Title</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family:Georgia, 'Times New Roman', Times, serif
-}
-.header {
-    padding: 10px;
-    text-align: center;
-    color: black;
-}
-.header h1{
-    font-size: 40px;
-}
-.row1{
-    padding-top: 10px;
-    padding-left: 25px;
-}
-.row1 h1{
-    font-size: 30px;
-}
-.row2{
-    padding-top: 10px;
-    padding-left: 25px;
-}
-.row2 h1{
-    font-size: 30px;
-}
-.resultRow{
-    padding-top: 25px;
-    padding-left: 30px;
-}
-</style>
 </head>
 <body>
 
     <div class = "header">
         <h1>
-            Blood Smear Analysis
+            Blood Smear Analysis (Work in progress)
         </h1>
         <p>
             A website and machine learning application created by Andrew van der Kleut
@@ -55,7 +24,7 @@ body {
             one cell other than erythrocytes in question for analysis. 
         </p>
         <p>
-            The machine learning program was created using TensorFlow with training and validation images from 
+            The machine learning program was created using TensorFlow with training and validation images from: 
             <a href="https://data.mendeley.com/datasets/snkd93bnjr/1"> A dataset for microscopic peripheral blood cell images for development of automatic recognition systems</a>
         </p>
     </div>
@@ -68,6 +37,19 @@ body {
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload Image" name="submit">
         </form>
+    </div>
+    <div id = "displayImg">
+        <?php
+        $query = " select * from image ";
+        $result = mysqli_query($db, $query);
+        
+        while ($data = mysqli_fetch_assoc($result)) {
+        ?>
+            <img src="./image/<?php echo $data['filename']; ?>">
+         
+        <?php
+            }
+        ?>
     </div>
     <div class="resultRow">
         <h1>
